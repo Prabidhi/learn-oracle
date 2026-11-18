@@ -1,0 +1,138 @@
+[
+  {
+    "title": "APEX: Daily API Loads and Email",
+    "href": "apex/apex-api-automation-lab.html",
+    "section": "Oracle",
+    "topic": "apex",
+    "art": "apex",
+    "added": "2026-11-18",
+    "desc": "What it takes to call an outside API from APEX every day, load a staging table and send an email: the network gate, the privileges you really need, four ways to run it without CREATE JOB, and why email needs a mail server.",
+    "points": [
+      "Toggle privileges and see what breaks",
+      "Step a call through the network gate",
+      "Pick a post office and follow an email"
+    ],
+    "tags": [
+      "apex",
+      "automation",
+      "rest data source",
+      "create job",
+      "privileges",
+      "acl",
+      "email",
+      "smtp",
+      "oracle"
+    ]
+  },
+  {
+    "title": "APEX Lab Tour",
+    "href": "apex/apex-lab-tour.html",
+    "section": "Oracle",
+    "topic": "apex",
+    "art": "apex",
+    "added": "2026-11-12",
+    "desc": "Follow a click through a first Oracle APEX app: browser, ORDS in Tomcat, the APEX engine and your own tables, plus a settings table, confirmation numbers and public-domain BLS data fetched two ways.",
+    "points": [
+      "Step through five scenarios on a live map",
+      "Watch settings and counter rows change",
+      "Compare copying data in with asking each time"
+    ],
+    "tags": [
+      "apex",
+      "low-code",
+      "ords",
+      "rest data source",
+      "bls",
+      "settings",
+      "oracle"
+    ]
+  },
+  {
+    "title": "ORDS, Tomcat and APEX Lab",
+    "href": "ords/ords-tomcat-apex-lab.html",
+    "section": "Oracle",
+    "topic": "ords",
+    "art": "ords-arch",
+    "added": "2026-11-11",
+    "desc": "One practice lab in three stages: ORDS by itself, ORDS inside Tomcat, then APEX on top. See where each piece runs, which database account answers each address, and what every error code meant.",
+    "points": [
+      "Step through the three stages on a map",
+      "Pick an address and see who answers",
+      "Flip four switches and see what breaks"
+    ],
+    "tags": [
+      "ords",
+      "tomcat",
+      "apex",
+      "install",
+      "status codes",
+      "oauth"
+    ]
+  },
+  {
+    "title": "ORDS Architecture, Explained",
+    "href": "ords/ords-architecture-explained.html",
+    "section": "Oracle",
+    "topic": "ords",
+    "art": "ords-arch",
+    "added": "2026-11-07",
+    "desc": "What happens between an HTTP request and your schema: Tomcat, ords.war, the JDBC driver, the connection pool, ORDS_PUBLIC_USER acting as your schema, and how grants reach other schemas.",
+    "points": [
+      "Follow one request through the building",
+      "Check the office analogy step by step",
+      "Run the pool and watch lines go new and warm"
+    ],
+    "tags": [
+      "ords",
+      "architecture",
+      "tomcat",
+      "jdbc",
+      "connection pool",
+      "proxy"
+    ]
+  },
+  {
+    "title": "ORDS 403, Hardened Grants",
+    "href": "ords/ords-403-hardened-grants.html",
+    "section": "Oracle",
+    "topic": "ords",
+    "added": "2026-11-07",
+    "desc": "Why every PL/SQL handler got 403 on a hardened database while plain SQL GETs worked: the code ORDS runs around your handler needs DBMS_LOB and DBMS_PICKLER. Look inside both packages and weigh the risk of each grant.",
+    "points": [
+      "Trace a request through all five ORDS stages",
+      "See what each package does and how risky its grant is",
+      "Copy the checks and the DBA request"
+    ],
+    "tags": [
+      "ords",
+      "pl/sql",
+      "privileges",
+      "dbms_lob",
+      "dbms_pickler",
+      "security",
+      "cis"
+    ]
+  },
+  {
+    "title": "ORDS 403, Explained",
+    "href": "ords/ords-403-explained.html",
+    "section": "Oracle",
+    "topic": "ords",
+    "added": "2026-11-06",
+    "desc": "Why a REST gateway schema's POST handlers got 403 while GETs worked: the HTP reproduction from the lab, the two packages the real database was missing, and why DBMS_PICKLER is only asked on new connections.",
+    "points": [
+      "Replay the investigation and see why HTP was ruled out",
+      "Watch connections go new and warm, step by step",
+      "Simulate requests and rebuild the lab"
+    ],
+    "tags": [
+      "ords",
+      "pl/sql",
+      "privileges",
+      "sys.htp",
+      "dbms_lob",
+      "dbms_pickler",
+      "connection pool"
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+# Checks the Oracle pages, then asks the Learning Lab to rebuild so they go live.
+# The Lab's build copies this repo into oracle/ on https://learn.prabidhis.com.
+
+stages:
+  - test
+  - secret-detection
+  - deploy
+
+include:
+  - template: Security/Secret-Detection.gitlab-ci.yml
+
+secret_detection:
+  stage: secret-detection
+
+# A stale hash stops a page's scripts running. Uses the Lab's own checker.
+csp-check:
+  stage: test
+  image: python:3.13-alpine
+  script:
+    - wget -qO /tmp/update_csp.py https://gitlab.com/Prabidhi/learn-simulation-dashboard/-/raw/main/scripts/update_csp.py
+    - python3 /tmp/update_csp.py --check --root .
+
+# Rebuild and redeploy the Lab, which pulls in this repo's newest pages.
+rebuild-lab:
+  stage: deploy
+  trigger:
+    project: Prabidhi/learn-simulation-dashboard
+    branch: main
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
